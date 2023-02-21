@@ -24,13 +24,15 @@ header {
 header a {
   display: grid;
   place-items: center;
-  background-color: var(--custom_purple);
+  background-color: var(--custom_beige);
+  border-bottom: var(--custom_purple) 3px solid ;
 }
 .logo {
   max-width: 50%;
   padding: 1rem;
   max-height: 150px;
   object-fit: contain;
+  filter: invert(100%);
 }
 section {
   display: grid;
@@ -91,7 +93,57 @@ div:nth-of-type(2) {
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
-
+/* footer */
+footer{
+  background-color: var(--custom_purple);
+  color: var(--custom_white);
+  display: grid;
+  gap: 1.25rem;
+  padding-inline: 1rem;
+}
+footer .facebook img,
+footer .instagram img {
+  filter: invert(100%);
+  max-width: 2rem;
+  max-height: 2rem;
+  object-fit: contain;
+}
+footer .facebook,
+footer .instagram {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  background-color: unset;
+  padding: unset;
+}
+footer h3 {
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+footer p {
+  font-family: lato, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.newsletter{
+  grid-template-columns: 1fr !important;
+  background-color: unset !important;
+}
+footer input {
+  display: grid;
+  width: 100%;
+  height: 3rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1.1rem;
+}
+footer a img{
+  object-fit: contain;
+  padding: 2rem;
+  max-height: 250px;
+}
 @media (min-width: 900px) {
   section {
     grid-template-columns: repeat(2, 1fr);
@@ -103,6 +155,17 @@ div:nth-of-type(2) {
     width: 100%;
 
   }
+  footer{
+    grid-template-columns: repeat(2,1fr);
+  }
+  footer a{
+    grid-column: span 2;
+  }
+  footer .facebook,
+footer .instagram {
+display: flex;
+text-justify: center;
+}
 }
 @media (min-width: 1200px) {
   section {
@@ -120,7 +183,7 @@ div:nth-of-type(2) {
     align-content: start;
   }
   h2 {
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: center;
     padding: 2rem;
   }
@@ -152,5 +215,16 @@ transform: scale(1.1);
 color: var(--custom_red);
 outline-color: var(--custom_red);
   }
-  
+  footer{
+    grid-template-columns: repeat(3,1fr);
+    padding-inline: 2rem;
+  }
+  footer a{
+    grid-column: span 1;
+  }
+  footer .facebook,
+footer .instagram {
+display: flex;
+text-justify: center;
+}
 }
