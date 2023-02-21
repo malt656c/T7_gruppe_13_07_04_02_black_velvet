@@ -13,8 +13,8 @@ const backupData = "steder.json";
 const mapsUrl = "https://www.google.dk/maps/place/";
 
 async function getData() {
-/*   const respons = await fetch(apiUrl, urlOptions); */
-const respons = await fetch(backupData);
+  const respons = await fetch(apiUrl, urlOptions);
+/* const respons = await fetch(backupData); */
   const json = await respons.json();
   console.log("data Hentet");
   vis(json);
