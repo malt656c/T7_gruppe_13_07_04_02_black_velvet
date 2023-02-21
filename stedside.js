@@ -30,14 +30,23 @@ function vis(json) {
   /* "poster" informationen til dokumentet */
   document.querySelector("title").textContent = json.navn;
   document.querySelector(".navn").textContent = json.navn;
+  if(json.beskrivelse == ""){
+console.log("beskrivelse tom")
+  }else{
+      document.querySelector(".description").textContent = json.beskrivelse;
+  }
+  console.log(json.beskrivelse)
 document.querySelector(".website").href = json.link;
-  document.querySelector(".rating").textContent = json.rating + "/5";
+
   console.log(json.navn + " loaded");
 
+  let billedNavn = json.navn.split(" ");
+  let billedNavnDisplay = billedNavn.join("_");
+  document.querySelector("section img").src = `billeder/${json.category}/${billedNavnDisplay}_1.webp`;
   /* rating system */
-  document.querySelector(".rating").innerHTML = "<span>" + "★".repeat(json.rating) + "</span>" + "<span>" + "★".repeat(5 - json.rating) + "</span>" + ` ${json.rating}/5`;
-
-  console.log("done");
+/*   document.querySelector(".rating").innerHTML = "<span>" + "★".repeat(json.rating) + "</span>" + "<span>" + "★".repeat(5 - json.rating) + "</span>" + ` ${json.rating}/5`;
+  document.querySelector(".rating").textContent = json.rating + "/5";
+  console.log("done"); */
 }
 
 /* starter med at hente data */

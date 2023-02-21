@@ -18,6 +18,9 @@ body {
   overflow-x: hidden;
   background-color: var(--custom_beige);
 }
+header {
+  height: min-content;
+}
 header a {
   display: grid;
   place-items: center;
@@ -26,11 +29,12 @@ header a {
 .logo {
   max-width: 50%;
   padding: 1rem;
+  max-height: 150px;
+  object-fit: contain;
 }
 section {
   display: grid;
   grid-template-rows: auto auto 1fr;
-  gap: 1.25rem;
   place-items: center;
   position: relative;
   font-family: "lato", sans-serif;
@@ -39,7 +43,7 @@ section {
   color: var(--custom_purple);
 }
 a {
-    color: var(--custom_purple);
+  color: var(--custom_purple);
   text-decoration: none;
 }
 h2 {
@@ -49,8 +53,8 @@ h2 {
   font-size: 2rem;
 }
 img {
-  max-width: 100%;
-  content-visibility: cover;
+width: 100%;
+  object-fit:cover;
 }
 div:first-of-type {
   display: grid;
@@ -62,19 +66,20 @@ div:nth-of-type(2) {
 
   width: 100%;
   display: grid;
+  height: 100%;
   grid-template-columns: repeat(2, auto);
   padding: 1.25rem;
   gap: 1.25rem;
 }
-.rating span {
+/* .rating span {
   color: var(--custom_beige);
   filter: brightness(60%);
 }
 .rating span:first-of-type {
   color: var(--custom_red);
   filter: brightness(100%);
-}
-.rating,
+} */
+/* .rating, */
 .adresse {
   grid-column: span 2;
 }
@@ -82,7 +87,70 @@ div:nth-of-type(2) {
 .maps {
   outline: var(--custom_purple) 1px solid;
   width: fit-content;
+  height:fit-content ;
   padding: 0.5rem;
-  position: relative;
   margin-top: 0.5rem;
+}
+
+@media (min-width: 900px) {
+  section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr auto;
+  }
+  img {
+    grid-column: span 2;
+    max-height: 400px;
+    width: 100%;
+
+  }
+}
+@media (min-width: 1200px) {
+  section {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    height: calc(100vh - 150px);
+  }
+  img {
+    grid-column: span 1;
+    height: 100%;
+    max-height: unset;
+  }
+  div {
+    height: 100%;
+    align-content: start;
+  }
+  h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding: 2rem;
+  }
+  p {
+    max-width: 45ch;
+    font-size: 1.3rem;
+  }
+
+  div:nth-of-type(2) {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  div:nth-of-type(2) h2, .adresse{
+    grid-column: span 1;
+  }
+  .website,
+  .maps {
+    width: 6rem;
+    text-align: center;
+    transition-duration: 0.1s;
+    transition-timing-function: ease-in-out;
+  }
+  .maps{
+    margin-top: 4rem;
+  }
+  .website:hover,
+  .maps:hover {
+transform: scale(1.1);
+color: var(--custom_red);
+outline-color: var(--custom_red);
+  }
+  
 }

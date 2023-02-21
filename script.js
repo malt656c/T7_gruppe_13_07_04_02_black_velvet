@@ -8,7 +8,7 @@ const urlOptions = {
   },
 };
 
-const backupData = "steder.json";
+/* const backupData = "steder.json"; */
 
 const mapsUrl = "https://www.google.dk/maps/place/";
 
