@@ -197,9 +197,6 @@ min-width: fit-content;
   grid-row: 5/6;
   padding-block: 1rem;
 }
-#om-os{
-
-}
   .billede_link{
     display:flex;
   grid-column: 2/3;
