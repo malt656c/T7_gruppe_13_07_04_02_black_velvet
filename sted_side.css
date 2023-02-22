@@ -94,6 +94,8 @@ div:nth-of-type(2) {
   font-family: abril-display, serif;
   font-weight: 800;
   font-style: normal;
+  transition-duration: 0.1s;
+  transition-timing-function: ease-in-out;
 }
 /* footer */
 footer {
@@ -219,7 +221,7 @@ footer a img {
     margin-top: 4rem;
   }
   .website:hover,
-  .maps:hover {
+  .maps:hover, .go_back:hover {
     transform: scale(1.1);
     color: var(--custom_red);
     outline-color: var(--custom_red);

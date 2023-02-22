@@ -180,6 +180,13 @@ article h3 {
   font-weight: 800;
   font-style: normal;
   font-size: 1rem;
+  transition-duration: 0.2s;
+  transition-timing-function: ease-in-out;
+}
+.se_mere:hover {
+  transform: scale(1.1);
+  color: var(--custom_red);
+  outline-color: var(--custom_red);
 }
 img {
   width: 100%;
