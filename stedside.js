@@ -10,16 +10,31 @@ const urlOptions = {
     "x-apikey": "63eb46a2478852088da6821b",
   },
 };
+
 /* google maps link, klar til at indsætte adresse */
 const mapsUrl = "https://www.google.dk/maps/place/";
 /* henter dataen fra det specificerede link */
 async function getData() {
-  const respons = await fetch(apiUrl, urlOptions);
+  let respons;
+  try{
+  respons = await fetch(apiUrl, urlOptions);
   const json = await respons.json();
   console.log("data Hentet");
   vis(json);
+  }catch (error){
+    console.log(error)
+  }
+  if(respons?.ok){
+    console.log("respons virker")
+  }else{
+    const backupUrl = "steder.json";
+    respons = await fetch(backupUrl);
+    const json = await respons.json();
+backupId = json.filter(sted => sted._id == id)[0];
+console.log(backupId)
+vis(backupId)
 }
-
+}
 /* kloner html-skabelon og putter den hentede data i */
 function vis(json) {
   /* laver url addresse til google maps */
