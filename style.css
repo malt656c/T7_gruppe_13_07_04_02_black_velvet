@@ -16,7 +16,7 @@
 /* baggrund*/
 body {
   background: url(billeder/cph_bg.jpg) fixed center/cover;
-/*   backdrop-filter: brightness(75%) saturate(90%) sepia(30%) blur(2px); */
+  backdrop-filter: brightness(90%);
   max-width: 100vw;
   overflow-x: hidden;
   background-position: bottom;
@@ -252,6 +252,7 @@ footer input {
   }
   #om-os :is(h3, .instagram, .facebook) {
     grid-column: 2/3;
+    margin-right: auto;
   }
   #om-os img {
     grid-row: 2/6;
@@ -266,10 +267,6 @@ footer input {
     padding-inline: 1rem;
     max-width: 1300px;
   }
-  .facebook,
-.instagram {
-margin-right: auto;
-}
   h2,
   .back_to_top {
     grid-column: span 2;
@@ -319,25 +316,25 @@ margin-right: auto;
     margin-inline: auto;
   }
   #ølbar article {
-    background-image: url(billeder/decoration/Beer\ glasses\ \(1\).svg);
+    background-image: url(billeder/decoration/Beer\ glasses\ 1.svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #vinbar article {
-    background-image: url(billeder/decoration/Wine\ bottle\ and\ glass\ \(1\).svg);
+    background-image: url(billeder/decoration/Wine\ bottle\ and\ glass\ 1.svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #restaurant article {
-    background-image: url(billeder/decoration/Fork\ and\ knife\ \(1\).svg);
+    background-image: url(billeder/decoration/Fork\ and\ knife\ 1.svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #bodega article {
-    background-image: url(billeder/decoration/Beer\ bottle\ \(1\).svg);
+    background-image: url(billeder/decoration/Beer\ bottle\ 1.svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;

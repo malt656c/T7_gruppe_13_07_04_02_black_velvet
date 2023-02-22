@@ -26,14 +26,13 @@ header a {
   display: grid;
   place-items: center;
   background-color: var(--custom_white);
-  border-bottom: var(--custom_purple) 3px solid ;
+  border-bottom: var(--custom_purple) 3px solid;
 }
 .logo {
   max-width: 50%;
   padding: 1rem;
   max-height: 150px;
   object-fit: contain;
-  filter: invert(100%);
 }
 /* indhold */
 section {
@@ -57,8 +56,8 @@ h2 {
   font-size: 2rem;
 }
 img {
-width: 100%;
-  object-fit:cover;
+  width: 100%;
+  object-fit: cover;
 }
 div:first-of-type {
   display: grid;
@@ -82,12 +81,12 @@ div:nth-of-type(2) {
 .maps {
   outline: var(--custom_purple) 1px solid;
   width: fit-content;
-  height:fit-content ;
+  height: fit-content;
   padding: 0.5rem;
   margin-top: 0.5rem;
 }
 /* footer */
-footer{
+footer {
   background-color: var(--custom_purple);
   color: var(--custom_white);
   display: grid;
@@ -113,16 +112,17 @@ footer h3 {
   font-family: lato, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 footer p {
   font-family: lato, sans-serif;
   font-weight: 400;
   font-style: normal;
 }
-.newsletter{
+.newsletter {
   grid-template-columns: 1fr !important;
   background-color: unset !important;
+  place-items: unset !important;
 }
 footer input {
   display: grid;
@@ -132,7 +132,7 @@ footer input {
   padding: 1rem;
   font-size: 1.1rem;
 }
-footer a img{
+footer a img {
   object-fit: contain;
   padding: 2rem;
   max-height: 250px;
@@ -146,21 +146,26 @@ footer a img{
     grid-column: span 2;
     max-height: 400px;
     width: 100%;
-
   }
-  footer{
-    grid-template-columns: repeat(2,1fr);
+  footer {
+    grid-template-columns: repeat(2, 1fr);
   }
-  footer a{
+  footer a {
     grid-column: span 2;
   }
   footer .facebook,
-footer .instagram {
-display: flex;
-text-justify: center;
-}
+  footer .instagram {
+    display: flex;
+    text-justify: center;
+  }
 }
 @media (min-width: 1200px) {
+  header a {
+    place-items: unset;
+  }
+  .logo {
+    max-width: 25%;
+  }
   section {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
@@ -182,14 +187,15 @@ text-justify: center;
   }
   p {
     max-width: 45ch;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
 
   div:nth-of-type(2) {
     grid-template-columns: 1fr;
     place-items: center;
   }
-  div:nth-of-type(2) h2, .adresse{
+  div:nth-of-type(2) h2,
+  .adresse {
     grid-column: span 1;
   }
   .website,
@@ -199,25 +205,25 @@ text-justify: center;
     transition-duration: 0.1s;
     transition-timing-function: ease-in-out;
   }
-  .maps{
+  .maps {
     margin-top: 4rem;
   }
   .website:hover,
   .maps:hover {
-transform: scale(1.1);
-color: var(--custom_red);
-outline-color: var(--custom_red);
+    transform: scale(1.1);
+    color: var(--custom_red);
+    outline-color: var(--custom_red);
   }
-  footer{
-    grid-template-columns: repeat(3,1fr);
+  footer {
+    grid-template-columns: repeat(3, 1fr);
     padding-inline: 2rem;
   }
-  footer a{
+  footer a {
     grid-column: span 1;
   }
   footer .facebook,
-footer .instagram {
-display: flex;
-text-justify: center;
-}
+  footer .instagram {
+    display: flex;
+    text-justify: center;
+  }
 }
