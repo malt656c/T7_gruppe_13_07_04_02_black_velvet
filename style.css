@@ -54,7 +54,7 @@ nav a {
 /* sectionerne */
 main {
   display: grid;
-  background-color: var(--custom_beige);
+  background-color: var(--custom_white);
 }
 section {
   min-height: 100vh;
@@ -157,7 +157,7 @@ article h3 {
   margin-left: auto;
   color: var(--custom_purple);
   text-transform: uppercase;
-  background-color: var(--custom_white);
+  background-color: white;
   font-family: abril-display, serif;
   font-weight: 800;
   font-style: normal;
@@ -233,7 +233,7 @@ footer input {
   height: 3rem;
   border-radius: 10px;
   padding: 1rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 /* desktop og tablet*/
 @media (min-width: 800px) {
@@ -264,8 +264,12 @@ footer input {
     gap: 1rem;
     place-items: center;
     padding-inline: 1rem;
-    max-width: 1500px;
+    max-width: 1300px;
   }
+  .facebook,
+.instagram {
+margin-right: auto;
+}
   h2,
   .back_to_top {
     grid-column: span 2;
@@ -287,7 +291,7 @@ footer input {
     aspect-ratio: 1/1;
   }
   article {
-    background-color: var(--custom_white);
+    background-color: white;
     grid-template-columns: 1fr 1fr;
     gap: 0;
     padding-inline: unset;
@@ -315,25 +319,25 @@ footer input {
     margin-inline: auto;
   }
   #ølbar article {
-    background-image: url(billeder/decoration/Beer\ glasses.svg);
+    background-image: url(billeder/decoration/Beer\ glasses\ \(1\).svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #vinbar article {
-    background-image: url(billeder/decoration/Wine\ bottle\ and\ glass.svg);
+    background-image: url(billeder/decoration/Wine\ bottle\ and\ glass\ \(1\).svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #restaurant article {
-    background-image: url(billeder/decoration/Fork\ and\ knife.svg);
+    background-image: url(billeder/decoration/Fork\ and\ knife\ \(1\).svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
   }
   #bodega article {
-    background-image: url(billeder/decoration/Beer\ bottle.svg);
+    background-image: url(billeder/decoration/Beer\ bottle\ \(1\).svg);
     background-size: 50%;
     background-position: left;
     background-repeat: no-repeat;
@@ -361,13 +365,13 @@ footer input {
     margin: auto;
   }
   footer img {
-    max-height: 250px;
+    max-height: 200px;
   }
   .some {
     align-content: start;
   }
   footer p {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
   }
 }
 @media (min-width: 1300px) {
