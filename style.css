@@ -16,14 +16,16 @@
 /* baggrund*/
 body {
   background: url(billeder/cph_bg.jpg) fixed center/cover;
-  backdrop-filter: brightness(75%) saturate(90%) sepia(30%) blur(2px);
+/*   backdrop-filter: brightness(75%) saturate(90%) sepia(30%) blur(2px); */
   max-width: 100vw;
   overflow-x: hidden;
+  background-position: bottom;
 }
 /* menu og header */
 header img {
-  padding-inline: 3rem;
-  padding-top: 2rem;
+  padding-inline: 1rem;
+  padding-top: 1rem;
+  margin-top: 8rem;
 }
 header {
   height: 100vh;
