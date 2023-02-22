@@ -78,12 +78,18 @@ div:nth-of-type(2) {
   grid-column: span 2;
 }
 .website,
-.maps {
+.maps, .go_back {
   outline: var(--custom_purple) 1px solid;
   width: fit-content;
   height: fit-content;
   padding: 0.5rem;
   margin-top: 0.5rem;
+}
+.go_back{
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  background-color: white;
 }
 /* footer */
 footer {
