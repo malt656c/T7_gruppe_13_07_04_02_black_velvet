@@ -50,6 +50,24 @@ nav a {
   text-decoration: none;
   color: var(--custom_white);
   font-size: 1.6rem;
+  transition-duration:0.2s;
+  transition-timing-function: ease-in-out;
+}
+nav a::after{
+  content: '';
+  display: grid;
+  height: 2px;
+  background-color: var(--custom_white);
+  width: 0%;
+  transition-duration:0.3s;
+  transition-timing-function: ease-in-out;
+  transform-origin: left;
+}
+nav a:hover::after{
+  width: 100%;
+}
+nav a:hover{
+  transform: scale(1.1);
 }
 /* sectionerne */
 main {
