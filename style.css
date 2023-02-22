@@ -301,14 +301,16 @@ footer input {
     display: flex;
     padding-inline: 1rem;
     align-self: flex-end;
+    justify-self: center;
     font-size: 2rem;
   }
   article address {
     grid-row: 2/3;
     grid-column: 1/2;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     align-self: normal;
     padding: 1rem;
+    justify-self: center;
   }
   .se_mere {
     grid-column: 2/3;

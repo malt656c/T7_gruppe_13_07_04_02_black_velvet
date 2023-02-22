@@ -90,6 +90,10 @@ div:nth-of-type(2) {
   top: 1.5rem;
   left: 1.5rem;
   background-color: white;
+  text-transform: uppercase;
+  font-family: abril-display, serif;
+  font-weight: 800;
+  font-style: normal;
 }
 /* footer */
 footer {
