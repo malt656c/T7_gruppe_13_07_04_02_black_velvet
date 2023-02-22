@@ -292,7 +292,7 @@ footer input {
     gap: 0;
     padding-inline: unset;
     aspect-ratio: 2/1;
-    max-width: 450px;
+    max-width: 100%;
   }
   article h3 {
     grid-row: 1/2;
