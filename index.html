@@ -10,7 +10,9 @@
   </head>
   <body>
     <header>
+      <!-- logo med link -->
       <a href=""><img src="billeder/logo/logo.svg" alt="" /></a>
+      <!-- nav menu med scroll funktion, "#" betyder at linket går til et element med det id på siden -->
       <nav>
         <a href="#om-os">About Us</a>
         <a href="#vinbar">Wine Bars</a>
@@ -20,6 +22,7 @@
       </nav>
     </header>
     <main>
+      <!-- "about us" siden -->
       <section id="om-os">
         <img src="billeder/decoration/Gruppebillede.svg" alt="" />
         <h2>~ About us ~</h2>
@@ -32,7 +35,7 @@
           the right place! <br />
           Enjoy.
         </p>
-
+<!-- facebook og instagram links/billeder -->
         <h3><b>Follow us here</b></h3>
         <div class="instagram">
           <img src="billeder/decoration/instagram.svg" alt="" />
@@ -42,11 +45,14 @@
           <img src="billeder/decoration/facebook.svg" alt="" />
           <p>@blackvelvetcopenhagen</p>
         </div>
-
+<!-- "back to top" link, et "#" uden noget tekst, går til toppen af siden -->
         <a href="#" class="back_to_top">Back To Top</a>
       </section>
+      <!-- vinbar section -->
       <section id="vinbar">
+        <!-- overskrift -->
         <h2>~ Wine bars ~</h2>
+        <!-- skabelon for "ui cards", skabelonen bliver klonet i javascript og udfyldt med data fra databasen-->
         <template id="place_template">
           <article>
             <a href="" class="billede_link"><img src="billeder/placeholder.jpg" alt="" /></a>
@@ -57,20 +63,25 @@
         </template>
         <a href="#" class="back_to_top">Back To Top</a>
       </section>
+      <!-- ølbar section -->
       <section id="ølbar">
         <h2>~ Beer bars ~</h2>
         <a href="#" class="back_to_top">Back To Top</a>
       </section>
+      <!-- restaurant section -->
       <section id="restaurant">
         <h2>~ Restaurants ~</h2>
         <a href="#" class="back_to_top">Back To Top</a>
       </section>
+      <!-- bodega section -->
       <section id="bodega">
         <h2>~ Pubs ~</h2>
         <a href="#" class="back_to_top">Back To Top</a>
       </section>
     </main>
+    <!-- footer -->
     <footer>
+      <!-- sociale medie links -->
       <div class="some">
         <h3><b>Follow us here</b></h3>
         <div class="instagram">
@@ -82,6 +93,7 @@
           <p>@blackvelvetcopenhagen</p>
         </div>
       </div>
+      <!-- nyhedbrev med input -->
       <div class="newsletter">
         <h3>Newsletter</h3>
         <p>
@@ -92,8 +104,10 @@
         <input type="text" name="newsletter" id="name" placeholder="your name goes here"/>
         <input type="text" name="newsletter" id="e-mail" placeholder="your email goes here"/>
       </div>
+      <!-- logo i footer -->
       <a href=""><img src="billeder/logo/logo.svg" alt="" /></a>
     </footer>
+    <!-- indsætning af javascript filen -->
     <script src="script.js"></script>
   </body>
 </html>

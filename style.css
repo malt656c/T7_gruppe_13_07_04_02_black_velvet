@@ -64,7 +64,6 @@ section {
   gap: 2rem;
   padding: 1rem;
 }
-
 h2 {
   font-family: abril-display, serif;
   font-weight: 800;
@@ -82,6 +81,7 @@ h2 {
   display: flex;
   flex-direction: column;
 }
+/* gælder for alle overskrifter undtagen "about us" */
 h2:not(#om-os > h2)::before {
   content: "Recommended";
   font-family: lato, sans-serif;
@@ -89,7 +89,7 @@ h2:not(#om-os > h2)::before {
   font-style: normal;
   font-size: 1.3rem;
 }
-/* om os */
+/* "about us" siden */
 #om-os {
   align-content: start;
   gap: 2rem;
@@ -120,7 +120,7 @@ h2:not(#om-os > h2)::before {
   padding-inline: 2rem;
   color: var(--custom_purple);
 }
-/* steder */
+/* opsætning af "ui cards" */
 .billede_link {
   grid-column: span 2;
   max-height: 10rem;
@@ -235,7 +235,7 @@ footer input {
   padding: 1rem;
   font-size: 1.1rem;
 }
-/* desktop */
+/* desktop og tablet*/
 @media (min-width: 800px) {
   /* menu */
   nav {

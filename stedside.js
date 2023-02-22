@@ -1,4 +1,4 @@
-/* hente data og difinér*/
+/* difinerer hvor dataen skal hentes fra,*/
 const urlParams = new URLSearchParams(window.location.search);
 
 const id = urlParams.get("id");
@@ -10,9 +10,9 @@ const urlOptions = {
     "x-apikey": "63eb46a2478852088da6821b",
   },
 };
-
+/* google maps link, klar til at indsætte adresse */
 const mapsUrl = "https://www.google.dk/maps/place/";
-
+/* henter dataen fra det specificerede link */
 async function getData() {
   const respons = await fetch(apiUrl, urlOptions);
   const json = await respons.json();
@@ -20,7 +20,7 @@ async function getData() {
   vis(json);
 }
 
-/* klone html-skabelon og putte den hentede data i */
+/* kloner html-skabelon og putter den hentede data i */
 function vis(json) {
   /* laver url addresse til google maps */
   let arr = json.adresse.split(" ");
@@ -30,6 +30,7 @@ function vis(json) {
   /* "poster" informationen til dokumentet */
   document.querySelector("title").textContent = json.navn;
   document.querySelector(".navn").textContent = json.navn;
+  /* indsætter beskrivelse fra databasen, hvis der ikke er beskrivelse, indsætter den lorem ipsum tekst */
   if(json.beskrivelse == ""){
 console.log("beskrivelse tom")
   }else{
@@ -39,15 +40,10 @@ console.log("beskrivelse tom")
 document.querySelector(".website").href = json.link;
 
   console.log(json.navn + " loaded");
-
+    /* omdanner navnet på stedet til navnet på billederne, og indsætter billederne hvor de skal være */
   let billedNavn = json.navn.split(" ");
   let billedNavnDisplay = billedNavn.join("_");
   document.querySelector("section img").src = `billeder/${json.category}/${billedNavnDisplay}_1.webp`;
-  /* rating system */
-/*   document.querySelector(".rating").innerHTML = "<span>" + "★".repeat(json.rating) + "</span>" + "<span>" + "★".repeat(5 - json.rating) + "</span>" + ` ${json.rating}/5`;
-  document.querySelector(".rating").textContent = json.rating + "/5";
-  console.log("done"); */
 }
-
 /* starter med at hente data */
 getData();

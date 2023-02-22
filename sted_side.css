@@ -1,3 +1,4 @@
+/* narmaliserer og definerer variabler */
 :root {
   --custom_black: #000000;
   --custom_white: #f5f4f0;
@@ -11,13 +12,13 @@
   box-sizing: border-box;
   margin: 0;
 }
-/* baggrund*/
 body {
   max-width: 100vw;
   max-width: 100dvw;
   overflow-x: hidden;
   background-color: var(--custom_beige);
 }
+/* header */
 header {
   height: min-content;
 }
@@ -34,6 +35,7 @@ header a {
   object-fit: contain;
   filter: invert(100%);
 }
+/* indhold */
 section {
   display: grid;
   grid-template-rows: auto auto 1fr;
@@ -73,15 +75,6 @@ div:nth-of-type(2) {
   padding: 1.25rem;
   gap: 1.25rem;
 }
-/* .rating span {
-  color: var(--custom_beige);
-  filter: brightness(60%);
-}
-.rating span:first-of-type {
-  color: var(--custom_red);
-  filter: brightness(100%);
-} */
-/* .rating, */
 .adresse {
   grid-column: span 2;
 }
