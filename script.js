@@ -7,14 +7,29 @@ const urlOptions = {
     "x-apikey": "63eb46a2478852088da6821b",
   },
 };
+const backupUrl = "steder.json"
 /* google maps link, klar til at indsætte adresse */
 const mapsUrl = "https://www.google.dk/maps/place/";
 /* henter dataen fra det specificerede link */
 async function getData() {
-  const respons = await fetch(apiUrl, urlOptions);
+  let respons;
+  try{
+  respons = await fetch(apiUrl, urlOptions);
   const json = await respons.json();
   console.log("data Hentet");
   vis(json);
+  }catch (error){
+    console.log(error)
+  }
+  if(respons?.ok){
+    console.log("respons virker")
+  }else{
+    respons = await fetch(backupUrl);
+    const json = await respons.json();
+    console.log("data Hentet");
+    vis(json);
+  }
+
 }
 
 /* kloner html-skabelon og putter den hentede data i de specificerede elementer */
